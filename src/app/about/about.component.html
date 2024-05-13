@@ -1,1 +1,45 @@
-<p>about works!</p>
+<section class="about p-4 border bg-success">
+  <!-- <button class="btn btn-dark" (click)="addFriend()">Add Friend</button> -->
+  <!-- <ul>
+    <li *ngFor="let friend of friends">{{ friend }}</li>
+  </ul> -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let product of products">
+        <div
+          [style.background-color]="product.onSale == true ? 'green' : 'red'"
+        >
+          <img height="170" [src]="product.imgPath" class="w-100" alt="" />
+          <h3>{{ product.name }}</h3>
+          <h4>{{ product.price }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table" *ngIf="users.length > 0; else msgTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.salary }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #msgTable>
+    <div>
+      <h2>Not Found</h2>
+    </div>
+  </ng-template>
+</section>
