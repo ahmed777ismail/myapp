@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+username: string="ahmed";
+userAge: number=26;
+welcome():void{
+  alert("welcome "+this.username)
+}
+onSale:boolean=false;
+sayHello():void{
+  alert("hello "+this.username)
+}
 
+work(eventInfo:any):void{
+  console.log(eventInfo)
+}
 }

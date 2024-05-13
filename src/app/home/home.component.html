@@ -1,1 +1,11 @@
-<p>home works!</p>
+<section class="home p-4 border bg-warning text-center">
+  <h2 [style.background-color]="onSale == true ? 'red' : 'green'">
+    hello HOME component
+  </h2>
+  <button class="btn btn-danger" (mouseenter)="sayHello()" (click)="welcome()">
+    ok
+  </button>
+  <input type="text" class="form-control" (keydown)="work($event)" />
+  <h3>{{ username }}</h3>
+  <h4>your age is {{ userAge }}</h4>
+</section>
