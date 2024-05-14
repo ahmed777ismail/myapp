@@ -1,5 +1,6 @@
 <section class="home p-4 border bg-warning text-center">
   <h2>Hello Home</h2>
-  <hr />
-  <app-card [userNameFromParent]="userName"></app-card>
+  <ul>
+    <li *ngFor="let item of homeFriends">{{ item }}</li>
+  </ul>
 </section>

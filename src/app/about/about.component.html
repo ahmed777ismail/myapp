@@ -4,7 +4,7 @@
     <li *ngFor="let friend of friends">{{ friend }}</li>
   </ul> -->
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col-md-4" *ngFor="let product of products">
         <div
@@ -17,8 +17,8 @@
         </div>
       </div>
     </div>
-  </div>
-
+  </div> -->
+  <!--
   <table class="table" *ngIf="users.length > 0; else msgTable">
     <thead>
       <tr>
@@ -36,7 +36,7 @@
         <td>{{ user.salary }}</td>
       </tr>
     </tbody>
-  </table>
+  </table> -->
 
   <ng-template #msgTable>
     <div>
@@ -46,41 +46,11 @@
 </section>
 
 <section class="about p-4 border bg-info">
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rem
-    laudantium minus distinctio maxime. Doloribus cupiditate dolore corporis
-    dolores quasi, consectetur soluta placeat eum optio, odio corrupti quam
-    aliquid quas exercitationem repudiandae numquam ipsam eius nobis deleniti
-    possimus vero! Consequatur minima hic reiciendis, sint cum nam error
-    repellendus tempore vel consequuntur doloremque rem at voluptates!
-    Architecto, quae. Nam reprehenderit voluptas nulla in dolore quae corporis
-    sit, rerum, est facere sed eaque molestiae veniam. Ipsa est blanditiis ex
-    minus, dignissimos obcaecati, consequatur quibusdam qui, saepe delectus
-    laborum. Modi, consequuntur pariatur alias error ut repellendus minima quae
-    ducimus culpa recusandae aperiam dolor repudiandae incidunt quis eos nostrum
-    perspiciatis eum sint accusantium? Quis quasi accusantium facere
-    praesentium, tempore distinctio excepturi cupiditate animi impedit obcaecati
-    qui vitae in a perspiciatis quod veritatis enim mollitia quae ratione? Magni
-    est assumenda voluptate dolore eaque architecto minima earum, doloribus
-    alias, excepturi possimus? Repellendus, modi ut unde voluptas autem repellat
-    impedit aut dolorem, commodi est dignissimos maxime velit numquam amet
-    doloremque sunt voluptate! Error, at autem molestias aspernatur, neque
-    laboriosam accusamus quisquam laborum doloremque natus mollitia architecto
-    aliquid odio nemo dolore ut quidem totam. Vel fugit accusantium molestiae
-    quo non magnam cum eius aspernatur aliquam ratione inventore reprehenderit
-    debitis voluptate nulla minima, consequuntur earum similique amet sed sit
-    placeat, neque explicabo! Distinctio vitae possimus error ratione? Accusamus
-    voluptatem minus, dicta perferendis perspiciatis obcaecati exercitationem ex
-    repellendus quod laboriosam enim nesciunt omnis inventore excepturi
-    repudiandae nemo reiciendis magnam et reprehenderit labore incidunt, earum
-    eaque ratione illum. Illum quas placeat soluta illo harum et veritatis
-    molestias praesentium veniam, reiciendis nisi tenetur cumque maxime,
-    officiis ullam accusamus? Eos atque quis eligendi voluptates voluptatem quas
-    hic numquam, a minus similique accusantium voluptate sunt nobis repellat
-    ipsa vel. Architecto fugit est nesciunt, quasi dolorum, illo facilis, velit
-    eligendi sequi esse atque fuga rem.
-  </p>
-  <input type="text" class="form-control" [(ngModel)]="searchTerm" />
+  <!-- <input type="text" class="form-control" [(ngModel)]="searchTerm" /> -->
   <hr />
-  <h4>{{ searchTerm }}</h4>
+  <!-- <h4>{{ searchTerm }}</h4> -->
+
+  <ul>
+    <li *ngFor="let item of aboutFriends">{{ item }}</li>
+  </ul>
 </section>
