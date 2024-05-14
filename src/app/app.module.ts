@@ -7,6 +7,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
+import { GallaryComponent } from './gallary/gallary.component';
+import { ContactComponent } from './contact/contact.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { WebComponent } from './web/web.component';
+import { MobileComponent } from './mobile/mobile.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +21,19 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    GallaryComponent,
+    ContactComponent,
+    NotFoundComponent,
+    WebComponent,
+    MobileComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

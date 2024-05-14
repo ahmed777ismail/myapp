@@ -1,0 +1,17 @@
+<section class="gallary p-4 border bg-secondary">
+  <h2>hello gallary</h2>
+  <button class="btn btn-danger">click me</button>
+  <div class="row">
+    <div class="col-md-2">
+      <ul>
+        <li><a routerLinkActive="bg-danger" routerLink="web">web</a></li>
+        <li><a routerLinkActive="bg-info" routerLink="mobile">mobile</a></li>
+        <li><a routerLink="/home">home</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-10">
+      <router-outlet> </router-outlet>
+    </div>
+  </div>
+</section>
