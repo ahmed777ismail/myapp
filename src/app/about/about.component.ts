@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import { User } from '../user';
-import { UserdataService } from '../userdata.service';
-
+import { ApidataService } from '../apidata.service';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css'],
 })
 export class AboutComponent {
   // searchTerm:string = '';
@@ -22,7 +20,6 @@ export class AboutComponent {
   //   {name:'Rana', age:30 , salary:9000},
   // ];
 
-
   // products:any[]=[
   //   {name:'product-1',price:3000,onSale:true,imgPath:'./assets/images/1.jpg'},
   //   {name:'product-2',price:9000,onSale:false,imgPath:'./assets/images/2.jpg'},
@@ -31,8 +28,11 @@ export class AboutComponent {
   //   {name:'product-5',price:3000,onSale:false,imgPath:'./assets/images/img10.jpg'},
   //   {name:'product-6',price:6000,onSale:true,imgPath:'./assets/images/img5.jpg'},
   // ]
-  aboutFriends:string[]=[];
-constructor(_UserdataService:UserdataService){
- this.aboutFriends = _UserdataService.friends;
-}
+  aboutFriends: string[] = [];
+  recipiesdata: any[] = [];
+  constructor(private _ApidataService: ApidataService) {
+    this._ApidataService.getPasta().subscribe((data) => {
+      this.recipiesdata = data.recipes;
+    });
+  }
 }

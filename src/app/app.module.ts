@@ -14,6 +14,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { WebComponent } from './web/web.component';
 import { MobileComponent } from './mobile/mobile.component';
 import { CardComponent } from './card/card.component';
+import { UserdataService } from './userdata.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,15 +29,10 @@ import { CardComponent } from './card/card.component';
     NotFoundComponent,
     WebComponent,
     MobileComponent,
-    CardComponent
+    CardComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [UserdataService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

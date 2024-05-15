@@ -1,10 +1,10 @@
-<section class="about p-4 border bg-info">
-  <!-- <button class="btn btn-dark" (click)="addFriend()">Add Friend</button> -->
-  <!-- <ul>
+<!-- <section class="about p-4 border bg-info"> -->
+<!-- <button class="btn btn-dark" (click)="addFriend()">Add Friend</button> -->
+<!-- <ul>
     <li *ngFor="let friend of friends">{{ friend }}</li>
   </ul> -->
 
-  <!-- <div class="container">
+<!-- <div class="container">
     <div class="row">
       <div class="col-md-4" *ngFor="let product of products">
         <div
@@ -18,7 +18,7 @@
       </div>
     </div>
   </div> -->
-  <!--
+<!--
   <table class="table" *ngIf="users.length > 0; else msgTable">
     <thead>
       <tr>
@@ -38,19 +38,19 @@
     </tbody>
   </table> -->
 
-  <ng-template #msgTable>
-    <div>
-      <h2>Not Found</h2>
-    </div>
-  </ng-template>
-</section>
+<!-- </section> -->
 
 <section class="about p-4 border bg-info">
   <!-- <input type="text" class="form-control" [(ngModel)]="searchTerm" /> -->
-  <hr />
+  <!-- <hr /> -->
   <!-- <h4>{{ searchTerm }}</h4> -->
 
-  <ul>
-    <li *ngFor="let item of aboutFriends">{{ item }}</li>
-  </ul>
+  <div class="row">
+    <div class="col-md-3" *ngFor="let item of recipiesdata.slice(0, 10)">
+      <div>
+        <img height="200" [src]="item.image_url" class="w-100" alt="" />
+        <h3 class="h6">{{ item.title }}</h3>
+      </div>
+    </div>
+  </div>
 </section>
